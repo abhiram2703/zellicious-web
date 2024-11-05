@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;400;700&display=swap">
+  <link rel="stylesheet" href="utils/testhome.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+        <img src="images/logo.png" alt="Restaurant Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <div class="username"><?php echo $user_data['user_name']; ?></div>
+      <button onclick="location.href='logout.php'" class="logout-button">Logout</button>
+    </div>
+  </header>
+  
+  <div class="homepage-container">
+    <h2 class="catchphrase">Order food from the comfort of your home!</h2>
+    
+    <!-- Horizontal Lines -->
+    <div class="horizontal-lines">
+      <hr class="line">
+      
+      <!-- News Carousel -->
+      <div class="news-carousel">
+        <p> 'FLAT10' FOR 10% DISCOUNT ON ORDERS ABOVE 599 || FREE DELIVERY ON FIRST ORDER || FREE BEVERAGES ON ORDERS ABOVE 999 || 'BR15' FOR 15% DISCOUNT ON ORDERING FROM BRANZOS</p>
+      </div>
+      
+      <hr class="line">
+    </div>
+    
+    
+    <h2 class="top-foods-heading">Top Categories</h2>
+    <div class="grid-container-1x4">
+      <div class="food-box" onclick="redirectToFood('Starters')">
+        <img src="images/section1img1.jpg" alt="Starters" class="food-image">
+        <h3>Starters</h3>
+      </div>
+      <div class="food-box" onclick="redirectToFood('Main Course')">
+        <img src="images/section1img2.jpg" alt="Main Course" class="food-image">
+        <h3>Main Course</h3>
+      </div>
+      <div class="food-box" onclick="redirectToFood('Beverages')">
+        <img src="images/section1img3.jpg" alt="Beverages" class="food-image">
+        <h3>Beverages</h3>
+      </div>
+      <div class="food-box" onclick="redirectToFood('Desserts')">
+        <img src="images/section1img4.jpg" alt="Desserts" class="food-image">
+        <h3>Desserts</h3>
+      </div>
+    </div>
+    
+    <h2 class="top-restaurants-heading">Top Restaurants</h2>
+    <div class="grid-container">
+      <div class="box" onclick="openPopup('Restaurant 1')">
+        <div class="image-placeholder">Image 1</div>
+        <div class="text-placeholder">Pizza Place</div>
+      </div>
+      <div class="box" onclick="openPopup('Restaurant 2')">
+        <div class="image-placeholder">Image 2</div>
+        <div class="text-placeholder">Burger Joint</div>
+      </div>
+      <div class="box" onclick="openPopup('Restaurant 3')">
+        <div class="image-placeholder">Image 3</div>
+        <div class="text-placeholder">Sushi Spot</div>
+      </div>
+      <div class="box" onclick="openPopup('Restaurant 4')">
+        <div class="image-placeholder">Image 4</div>
+        <div class="text-placeholder">Pasta House</div>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="restaurant-name">Restaurant Name</h2>
+        <div id="menu-items"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="utils/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Profile</title>
+    <link rel="stylesheet" href="restauranthome.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="logo.png" alt="Restaurant Logo" class="logo">
+        </div>
+        <div class="header-right">
+            <span class="restaurant-id">Restaurant ID: 12345</span>
+            <button class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <section class="restaurant-profile">
+        <h1>Restaurant Profile</h1>
+        <form class="profile-form">
+            <label for="restaurant-name">Restaurant Name</label>
+            <input type="text" id="restaurant-name" name="restaurant-name" placeholder="Enter restaurant name">
+            
+            <label for="restaurant-photo">Upload Photo</label>
+            <input type="file" id="restaurant-photo" name="restaurant-photo">
+            
+            <button type="submit" class="save-btn">Save Profile</button>
+        </form>
+    </section>
+
+    <section class="foods-section">
+        <h2>Foods</h2>
+        
+        <div class="food-box-container">
+            
+            <div class="food-box online-foods">
+                <h3>Foods Online</h3>
+                <ul class="food-list">
+                  <li class="food-item">
+                      <img src="pizza.jpg" alt="Pizza" class="food-thumbnail">
+                      <span class="food-name">Pizza</span>
+                      <span class="food-price">Price: ₹10</span>
+                      <span class="food-status">
+                          <button class="status-btn out-of-stock">Out of Stock</button>
+                          <input type="checkbox" class="out-of-stock-checkbox">
+                      </span>
+                      <button class="delete-btn">X</button>
+                  </li>
+                  <li class="food-item">
+                      <img src="logo.png" alt="Pizza" class="food-thumbnail">
+                      <span class="food-name">Pizza</span>
+                      <span class="food-price">Price: ₹10</span>
+                      <span class="food-status">
+                          <button class="status-btn out-of-stock">Out of Stock</button>
+                          <input type="checkbox" class="out-of-stock-checkbox">
+                      </span>
+                      <button class="delete-btn">X</button>
+                  </li>
+                  
+                </ul>
+                <button class="update-changes-btn">Update Changes</button>
+            </div>
+
+           
+            <div class="food-box add-food">
+                <h3>Add Food</h3>
+                <form class="add-food-form">
+                    <label for="food-name">Food Name</label>
+                    <input type="text" id="food-name" name="food-name" placeholder="Enter food name">
+
+                    <label for="food-photo">Upload Photo</label>
+                    <input type="file" id="food-photo" name="food-photo">
+
+                    <label for="food-price">Price</label>
+                    <input type="number" id="food-price" name="food-price" placeholder="Enter food price">
+
+                    <button type="submit" class="add-food-btn">Save Change</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
