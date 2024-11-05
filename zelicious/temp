@@ -1,0 +1,10 @@
+<div>
+                    <?php
+                         $query = "select * from zeli_res";
+                         $result=mysqli_query($con, $query);
+                         while($row=mysqli_fetch_assoc($result))
+                         {
+                    ?>
+                    <img src="images/<?php echo $row['res_img']?>"/>
+                    <?php } ?>
+                </div>
