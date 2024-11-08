@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            color: #343a40;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-info {
+            margin-bottom: 20px;
+        }
+
+        .order-info div {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .upload-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .upload-btn {
+            padding: 0.5rem 1rem;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">Delivery Confirmation</div>
+
+<div class="content">
+    <div class="order-info">
+        <div><strong>Order ID:</strong> <span id="orderId"></span></div>
+        <div><strong>Restaurant:</strong> <span id="restaurant"></span></div>
+        <div><strong>Address:</strong> <span id="address"></span></div>
+        <div><strong>Food Item:</strong> <span id="foodName"></span></div>
+        <div><strong>Price:</strong> <span id="price"></span></div>
+        <div><strong>Customer:</strong> <span id="username"></span></div>
+    </div>
+
+    <div class="upload-section">
+        <label for="uploadProof">Upload Proof of Delivery:</label><br><br>
+        <input type="file" id="uploadProof" accept="image/*"><br><br>
+        <button class="upload-btn">Upload</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const orderData = JSON.parse(localStorage.getItem('orderData'));
+
+        if (orderData) {
+            document.getElementById('orderId').innerText = orderData.orderId;
+            document.getElementById('restaurant').innerText = orderData.restaurant;
+            document.getElementById('address').innerText = orderData.address;
+            document.getElementById('foodName').innerText = orderData.foodName;
+            document.getElementById('price').innerText = orderData.price;
+            document.getElementById('username').innerText = orderData.username;
+        }
+    });
+
+    document.querySelector('.upload-btn').onclick = () => {
+        const fileInput = document.getElementById('uploadProof');
+        if (fileInput.files.length === 0) {
+            alert('Please select a file to upload.');
+        } else {
+            alert('Proof of delivery uploaded successfully!');
+            // Handle the file upload logic here (e.g., sending it to a server)
+            
+            // Redirect back to deliveryhome.html after successful upload
+            window.location.href = 'deliveryhome.html';
+        }
+    };
+</script>
+
+</body>
+</html>
