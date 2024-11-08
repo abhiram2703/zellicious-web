@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-left .logo {
+  height: 40px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.restaurant-id {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.logout-btn {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.restaurant-profile {
+  padding: 2rem;
+}
+
+.restaurant-profile h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.profile-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="file"],
+.profile-form input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.foods-section {
+  padding: 2rem;
+}
+
+.foods-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.food-box-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.food-box {
+  flex: 1;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.food-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.food-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+.food-item {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 0.5rem;
+}
+
+.food-thumbnail {
+  width: 50px; 
+  height: 50px; 
+  border-radius: 4px; 
+  margin-right: 10px; 
+}
+
+
+.food-name,
+.food-price {
+  flex: 1; 
+  padding-right: 10px; 
+}
+
+.food-status {
+  display: flex;
+  align-items: center; 
+  gap: 0.5rem; 
+}
+
+
+.status-btn {
+  padding: 0.3rem 0.5rem;
+}
+
+.food-quantity {
+  margin-right: 1rem;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.add-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-food-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.add-food-form input[type="text"],
+.add-food-form input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-food-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.update-changes-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.food-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.food-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-name {
+  font-weight: bold;
+}
+
+.food-price {
+  margin: 0.25rem 0; 
+}
+
+.food-status {
+  display: flex;
+  gap: 0.5rem; 
+}
+
+.status-btn {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.in-stock {
+  background-color: #28a745; 
+  color: white;
+}
+
+.out-of-stock {
+  background-color: #dc3545; 
+  color: white;
+}
+.out-of-stock:hover{
+  background-color: #63121a;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-btn:hover{
+  background-color: #63121a;
+}
+
+.food-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.refresh-btn
+{
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.refresh-btn:hover{
+  background-color: #0e4c8e;
+}
